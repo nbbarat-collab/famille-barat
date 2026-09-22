@@ -1,136 +1,102 @@
 <!doctype html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f7f7fb">
-<title>Famille BARAT</title>
-<link rel="manifest" href="manifest.json">
+<html lang="fr"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f7fb"><title>Famille BARAT V3</title><link rel="manifest" href="manifest.json">
 <style>
-:root{--bg:#f6f7fb;--card:#fff;--txt:#15171c;--muted:#6d7280;--line:#e7e8ee;--accent:#20232a;--danger:#b42318;--ok:#16794a;--warn:#a15c00}
-*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt)}
-header{padding:20px 18px 12px;position:sticky;top:0;background:rgba(246,247,251,.94);backdrop-filter:blur(12px);z-index:4}
-h1{font-size:24px;margin:0} .sub{color:var(--muted);font-size:13px;margin-top:3px}
-main{padding:0 14px 90px;max-width:760px;margin:auto}.tabs{display:flex;gap:7px;overflow:auto;padding:8px 0 14px}
-button,.tab,input,select{font:inherit}.tab{border:0;background:#e9eaf0;padding:10px 13px;border-radius:999px;white-space:nowrap}.tab.active{background:#20232a;color:white}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px;margin:0 0 12px;box-shadow:0 4px 18px rgba(0,0,0,.035)}
-.row{display:flex;justify-content:space-between;gap:12px;align-items:center}.muted{color:var(--muted)} .big{font-size:28px;font-weight:750}.pill{padding:6px 10px;border-radius:999px;font-size:13px;background:#eee}
-.item{padding:12px 0;border-top:1px solid var(--line)}.item:first-child{border-top:0}.time{font-weight:700;min-width:58px}.who{font-size:12px;color:var(--muted)}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.day{border:1px solid var(--line);background:#fff;border-radius:14px;padding:12px;text-align:left}.day strong{display:block}
-label{display:block;font-size:13px;color:var(--muted);margin:10px 0 5px} input,select{width:100%;border:1px solid #d9dbe3;border-radius:12px;padding:11px;background:white}
-.btn{border:0;border-radius:12px;padding:11px 14px;background:#20232a;color:white}.btn.secondary{background:#eceef3;color:#20232a}.btn.danger{background:#feeceb;color:#9b1c16}
-.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.hidden{display:none}.notice{padding:12px;border-radius:12px;background:#f0f2f7;margin-top:10px}
-footer{position:fixed;bottom:0;left:0;right:0;padding:8px 14px calc(8px + env(safe-area-inset-bottom));background:rgba(255,255,255,.92);border-top:1px solid var(--line);text-align:center;font-size:12px;color:var(--muted)}
-</style>
-</head>
-<body>
-<header><h1>Famille BARAT</h1><div class="sub">Cockpit familial • Hugo & Mathéo</div></header>
+:root{--bg:#f6f7fb;--card:#fff;--ink:#17191f;--muted:#717682;--line:#e4e6ec;--dark:#20232a;--green:#eaf7ef;--blue:#edf3ff;--vac:#fff5df}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+header{position:sticky;top:0;z-index:5;background:#f6f7fbef;backdrop-filter:blur(12px);padding:17px 15px 8px}h1{font-size:24px;margin:0}.sub,.muted{color:var(--muted);font-size:13px}
+main{max-width:900px;margin:auto;padding:0 13px 90px}.tabs{display:flex;gap:7px;overflow:auto;padding:9px 0 13px}.tab,.btn{border:0;border-radius:999px;padding:10px 13px;font:inherit;white-space:nowrap}.tab{background:#e9ebf0}.tab.active,.btn.primary{background:var(--dark);color:#fff}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:15px;margin-bottom:12px;box-shadow:0 4px 16px #00000008}.row{display:flex;align-items:center;justify-content:space-between;gap:10px}.big{font-size:26px;font-weight:800}.pill{padding:6px 9px;border-radius:999px;background:#eff0f4;font-size:12px}
+.item{border-top:1px solid var(--line);padding:10px 0}.item:first-child{border-top:0}.time{min-width:55px;font-weight:750}.hidden{display:none}.btn{background:#eceef2;color:#20232a}.btn.danger{background:#feeceb;color:#981e17}.actions,.quick{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+label{display:block;font-size:12px;color:var(--muted);margin:9px 0 4px}input,select{width:100%;padding:10px;border:1px solid #d7dae2;border-radius:11px;background:#fff;font:inherit}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.weekgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}.day{border:1px solid var(--line);background:#fff;border-radius:12px;padding:8px;min-height:118px;text-align:left}.day.vac{background:var(--vac)}.day strong{display:block}.small{font-size:11px;margin-top:4px}.free{background:var(--green);border-radius:8px;padding:5px;margin-top:5px;font-size:11px}.busy{background:#f4f0ff;border-radius:8px;padding:5px;margin-top:5px;font-size:11px}
+.monthgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}.mday{min-height:67px;border:1px solid var(--line);background:#fff;border-radius:9px;padding:5px;font-size:11px}.mday.vac{background:var(--vac)}.mday strong{font-size:13px;display:block}.notice{border-radius:12px;padding:11px;background:#f0f2f6;margin-top:9px}.vacnote{background:var(--vac)}
+table{width:100%;border-collapse:collapse;font-size:12px}td,th{padding:6px;border-bottom:1px solid var(--line);text-align:left}td input{min-width:80px;padding:7px}
+.event-info{background:var(--blue);padding:8px;border-radius:9px}.event-action{background:#fff0ef;padding:8px;border-radius:9px}
+footer{position:fixed;bottom:0;left:0;right:0;text-align:center;background:#ffffffef;border-top:1px solid var(--line);padding:8px;font-size:11px;color:var(--muted)}
+@media(max-width:650px){.weekgrid{grid-template-columns:1fr}.day{min-height:auto}.monthgrid{gap:2px}.mday{min-height:59px;padding:4px}}
+</style></head><body>
+<header><h1>Famille BARAT</h1><div class="sub">Année scolaire 2026–2027 • V3</div></header>
 <main>
-<div class="tabs">
-<button class="tab active" data-tab="today">Aujourd’hui</button>
-<button class="tab" data-tab="week">Semaine</button>
-<button class="tab" data-tab="exceptions">Exceptions</button>
-<button class="tab" data-tab="meeting">Rendez-vous</button>
-<button class="tab" data-tab="settings">Réglages</button>
-</div>
+<div class="tabs"><button class="tab active" data-tab="day">Jour</button><button class="tab" data-tab="week">Semaine</button><button class="tab" data-tab="month">Mois</button><button class="tab" data-tab="add">+ Événement</button><button class="tab" data-tab="exceptions">Exceptions</button><button class="tab" data-tab="settings">Réglages</button></div>
 
-<section id="today">
-<div class="card">
- <div class="row"><div><div class="muted" id="dateLabel"></div><div class="big" id="loadLabel"></div></div><span class="pill" id="weekType"></span></div>
- <div class="item"><div class="row"><strong>Maman</strong><span id="wifeStatus"></span></div></div>
-</div>
-<div class="card"><strong>Ce que Nicolas doit faire</strong><div id="todayList"></div></div>
-<div class="card"><strong>Informations famille</strong><div id="familyList"></div></div>
+<section id="day">
+<div class="card"><div class="row"><div><div id="dateLabel" class="muted"></div><div id="loadLabel" class="big"></div></div><span id="weekType" class="pill"></span></div>
+<div class="quick"><button class="btn" id="prevDay">←</button><button class="btn" id="todayBtn">Aujourd'hui</button><button class="btn" id="nextDay">→</button></div>
+<div id="vacationBanner"></div><div class="item row"><strong>Maman</strong><span id="wifeStatus"></span></div></div>
+<div class="card"><strong>Obligations de Nicolas</strong><div id="mine"></div></div>
+<div class="card"><strong>Hugo</strong><div id="hugo"></div></div>
+<div class="card"><strong>Mathéo</strong><div id="matheo"></div></div>
+<div class="card"><strong>Autres événements</strong><div id="custom"></div></div>
 </section>
 
-<section id="week" class="hidden"><div class="card"><strong>Semaine</strong><div class="grid" id="weekGrid" style="margin-top:12px"></div></div></section>
+<section id="week" class="hidden"><div class="card"><div class="nav"><button class="btn" id="prevWeek">← Semaine</button><strong id="weekTitle"></strong><button class="btn" id="nextWeek">Semaine →</button></div><div class="muted">Les créneaux verts sont les plages sans obligation familiale de Nicolas entre 8h et 19h.</div><div class="weekgrid" id="weekGrid"></div></div></section>
+<section id="month" class="hidden"><div class="card"><div class="nav"><button class="btn" id="prevMonth">←</button><strong id="monthTitle"></strong><button class="btn" id="nextMonth">→</button></div><div class="monthgrid" id="monthGrid"></div></div></section>
 
-<section id="exceptions" class="hidden">
-<div class="card"><strong>Modifier exceptionnellement une journée</strong>
-<label>Date</label><input type="date" id="exDate">
-<label>Type d’exception</label>
-<select id="exType">
-<option value="wifeOff">Maman finalement en repos</option>
-<option value="wifeWork">Maman travaille exceptionnellement</option>
-<option value="hugoNoSchool">Hugo n’a pas collège / pas de bus</option>
-<option value="hugoNoTennis">Hugo n’a pas tennis</option>
-<option value="matheoCovered">Mathéo entièrement pris en charge par un tiers</option>
-<option value="hugoCovered">Hugo entièrement pris en charge par un tiers</option>
-</select>
-<label>Note facultative</label><input id="exNote" placeholder="Ex. grands-parents, voisine…">
-<div class="actions"><button class="btn" id="saveEx">Ajouter l’exception</button></div>
-<div id="exList"></div>
-</div></section>
+<section id="add" class="hidden"><div class="card"><strong>Ajouter un événement</strong><div class="muted">Utilisable toute l'année, notamment pour les stages pendant les vacances.</div>
+<label>Date</label><input type="date" id="evDate" min="2026-09-01" max="2027-07-31"><div class="grid2"><div><label>Début</label><input type="time" id="evStart"></div><div><label>Fin</label><input type="time" id="evEnd"></div></div>
+<label>Enfant / famille</label><select id="evPerson"><option>Hugo</option><option>Mathéo</option><option>Famille</option><option>Nicolas</option></select>
+<label>Événement</label><input id="evTitle" placeholder="Ex. Stage natation"><label>Type</label><select id="evKind"><option value="info">Information uniquement</option><option value="action">Action pour Nicolas</option></select>
+<label>Note</label><input id="evNote" placeholder="Ex. Rambouillet"><div class="actions"><button class="btn primary" id="saveEvent">Ajouter au planning</button></div><div id="eventList"></div></div></section>
 
-<section id="meeting" class="hidden">
-<div class="card"><strong>Puis-je prendre ce rendez-vous ?</strong>
-<label>Date</label><input type="date" id="meetDate">
-<div class="grid"><div><label>Début</label><input type="time" id="meetStart" value="14:00"></div><div><label>Fin</label><input type="time" id="meetEnd" value="17:00"></div></div>
-<label>Lieu / objet</label><input id="meetName" placeholder="Ex. Démo client à Versailles">
-<div class="actions"><button class="btn" id="checkMeet">Vérifier</button></div>
-<div id="meetResult"></div>
-</div></section>
+<section id="exceptions" class="hidden"><div class="card"><strong>Exception ponctuelle</strong><label>Date</label><input type="date" id="exDate"><label>Modification</label><select id="exType"><option value="wifeOff">Maman finalement en repos</option><option value="wifeWork">Maman travaille exceptionnellement</option><option value="hugoNoSchool">Hugo : pas de collège / bus</option><option value="hugoNoTennis">Hugo : pas de tennis</option><option value="hugoCovered">Hugo pris en charge par un tiers</option><option value="matheoCovered">Mathéo pris en charge par un tiers</option></select><label>Note</label><input id="exNote"><div class="actions"><button class="btn primary" id="saveEx">Ajouter</button></div><div id="exList"></div></div></section>
 
 <section id="settings" class="hidden">
-<div class="card"><strong>Jours de travail de maman</strong><div class="muted" style="margin-top:5px">Ajoute ou retire les gardes. Elles sont enregistrées sur cet appareil.</div>
-<label>Ajouter une date</label><input type="date" id="wifeDate"><div class="actions"><button class="btn" id="addWife">Ajouter</button></div><div id="wifeDates"></div></div>
-<div class="card"><strong>Données</strong><div class="actions"><button class="btn secondary" id="exportData">Exporter</button><button class="btn danger" id="resetData">Réinitialiser les exceptions</button></div></div>
+<div class="card"><strong>Planning de maman</strong><div class="muted">Ajoute ses jours de travail lorsque son planning mensuel est connu.</div><label>Jour travaillé</label><input type="date" id="wifeDate"><div class="actions"><button class="btn primary" id="addWife">Ajouter</button></div><div id="wifeDates"></div></div>
+<div class="card"><strong>Planning récurrent d'Hugo</strong><div id="hugoSettings"></div><div class="actions"><button class="btn primary" id="saveHugo">Enregistrer</button></div></div>
+<div class="card"><strong>Planning récurrent de Mathéo</strong><div class="muted">Tu peux modifier ses horaires réguliers ci-dessous.</div><div id="matheoSettings"></div><div class="actions"><button class="btn primary" id="saveMatheo">Enregistrer</button></div></div>
+<div class="card"><strong>Données</strong><div class="actions"><button class="btn" id="exportData">Exporter</button><button class="btn danger" id="resetExceptions">Effacer exceptions</button></div></div>
 </section>
-</main>
-<footer>Données enregistrées localement dans le navigateur • v1.0</footer>
-
+</main><footer>Vacances Zone C intégrées • cycle A/B conservé en arrière-plan</footer>
 <script>
 const BASE_WIFE=["2026-09-24","2026-09-29","2026-09-30","2026-10-02","2026-10-06","2026-10-08","2026-10-09","2026-10-12","2026-10-14","2026-10-15"];
-let state=JSON.parse(localStorage.getItem("baratState")||"null")||{wife:[...BASE_WIFE],exceptions:[]};
-const save=()=>localStorage.setItem("baratState",JSON.stringify(state));
-const iso=d=>{let x=new Date(d);return x.getFullYear()+"-"+String(x.getMonth()+1).padStart(2,"0")+"-"+String(x.getDate()).padStart(2,"0")}
-const parse=s=>new Date(s+"T12:00:00");
-const mins=t=>{let [h,m]=t.split(":").map(Number);return h*60+m}
-function weekType(date){let base=parse("2026-09-21");let d=parse(date);let mon=new Date(d);mon.setDate(d.getDate()-((d.getDay()+6)%7));let n=Math.round((mon-base)/604800000);return n%2===0?"B":"A"}
-function ex(date,type){return state.exceptions.some(x=>x.date===date&&x.type===type)}
-function wifeWorks(date){if(ex(date,"wifeOff"))return false;if(ex(date,"wifeWork"))return true;return state.wife.includes(date)}
-function plan(date){
- let d=parse(date), dow=d.getDay(), wt=weekType(date), mine=[], info=[];
- if(dow>=1&&dow<=5&&!ex(date,"hugoNoSchool")){
-   const A={1:["07:45","17:30"],2:["08:50","17:30"],3:["08:50","13:00"],4:["07:45","15:30"],5:["07:45","17:30"]};
-   const B={1:["08:50","17:30"],2:["08:50","17:30"],3:["07:45","12:00"],4:["07:45","15:30"],5:["07:45","17:30"]};
-   let [go,back]=(wt==="A"?A:B)[dow];
-   if(!ex(date,"hugoCovered")){mine.push({time:go,label:"Déposer Hugo au bus",who:"Nicolas"});mine.push({time:back,label:"Récupérer Hugo au bus",who:"Nicolas"})}
-   else info.push({time:go,label:"Hugo pris en charge par un tiers"});
-   if(dow===4&&!ex(date,"hugoNoTennis")){if(!ex(date,"hugoCovered"))mine.push({time:"18:30",label:"Tennis Hugo – Clairefontaine",who:"Nicolas"});else info.push({time:"18:30",label:"Tennis Hugo – pris en charge"})}
+const HUGO={A:{1:["07:45","17:30"],2:["08:50","17:30"],3:["07:45","13:00"],4:["07:45","15:30"],5:["07:45","17:30"]},B:{1:["08:50","17:30"],2:["08:50","17:30"],3:["08:50","12:00"],4:["07:45","15:30"],5:["07:45","17:30"]}};
+const MATHEO={1:{bus:"07:55",extra:"18:00",label:"Étude jusqu'à 18h",owner:"nicolas"},2:{bus:"07:55",extra:"17:00",label:"Natation 17h–18h45",owner:"tiers"},3:{bus:"",extra:"",label:"Pas d'école",owner:"info"},4:{bus:"07:55",extra:"18:00",label:"Étude – récupération par la voisine",owner:"tiers"},5:{bus:"07:55",extra:"17:00",label:"Natation 17h–18h45",owner:"tiers"}};
+// Zone C 2026-2027 : périodes sans classe. Les bornes ci-dessous couvrent les jours sans classe.
+const VACATIONS=[
+ ["2026-10-17","2026-11-01","Vacances de la Toussaint"],
+ ["2026-12-19","2027-01-03","Vacances de Noël"],
+ ["2027-02-06","2027-02-21","Vacances d'hiver"],
+ ["2027-04-03","2027-04-18","Vacances de printemps"],
+ ["2027-05-07","2027-05-09","Pont / absence de classe"],
+ ["2027-07-03","2027-07-31","Vacances d'été"]
+];
+let prior=JSON.parse(localStorage.getItem("baratV2")||"null");
+let state=JSON.parse(localStorage.getItem("baratV3")||"null")||{wife:prior?.wife||BASE_WIFE,exceptions:prior?.exceptions||[],hugo:prior?.hugo||structuredClone(HUGO),matheo:structuredClone(MATHEO),events:[]};
+const save=()=>localStorage.setItem("baratV3",JSON.stringify(state));
+const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`,parse=s=>new Date(s+"T12:00:00"),mins=t=>{if(!t)return 9999;let[a,b]=t.split(":").map(Number);return a*60+b},hh=m=>`${String(Math.floor(m/60)).padStart(2,"0")}:${String(m%60).padStart(2,"0")}`;
+let selected=new Date(),weekCursor=new Date(),monthCursor=new Date();
+function weekType(s){let base=parse("2026-09-21"),d=parse(s),mon=new Date(d);mon.setDate(d.getDate()-((d.getDay()+6)%7));let n=Math.round((mon-base)/604800000);return n%2===0?"B":"A"}
+function vacation(s){return VACATIONS.find(v=>s>=v[0]&&s<=v[1])}
+function ex(s,t){return state.exceptions.some(x=>x.date===s&&x.type===t)} function wifeWorks(s){if(ex(s,"wifeOff"))return false;if(ex(s,"wifeWork"))return true;return state.wife.includes(s)}
+function plan(s){let d=parse(s),dow=d.getDay(),wt=weekType(s),vac=vacation(s),mine=[],hugo=[],matheo=[],custom=state.events.filter(e=>e.date===s);
+ if(vac){hugo.push({time:"",label:"Vacances scolaires – activités habituelles suspendues"});matheo.push({time:"",label:"Vacances scolaires – activités habituelles suspendues"});}
+ else{
+  if(dow>=1&&dow<=5&&!ex(s,"hugoNoSchool")){let [go,back]=state.hugo[wt][dow];hugo.push({time:go,label:"Bus départ Sonchamp"},{time:back,label:"Bus retour Sonchamp"});if(!ex(s,"hugoCovered"))mine.push({time:go,label:"Déposer Hugo au bus"},{time:back,label:"Récupérer Hugo au bus"});else hugo.push({time:"",label:"Prise en charge par un tiers"});if(dow===4&&!ex(s,"hugoNoTennis")){hugo.push({time:"18:30",label:"Tennis Clairefontaine 18h30–19h30"});if(!ex(s,"hugoCovered"))mine.push({time:"18:30",label:"Tennis Hugo – Clairefontaine"})}}
+  else hugo.push({time:"",label:(dow===0||dow===6)?"Week-end":"Pas de collège / bus"});
+  if(dow>=1&&dow<=5){let m=state.matheo[dow];if(m.bus)matheo.push({time:m.bus,label:"Bus école – autonome"});matheo.push({time:m.extra||"",label:m.label});if(dow===3&&wifeWorks(s))matheo.push({time:"",label:"Chez les grands-parents"});if(m.owner==="nicolas"&&!ex(s,"matheoCovered"))mine.push({time:m.extra,label:"Récupérer Mathéo à l'étude"})} else matheo.push({time:"",label:"Week-end"});
  }
- if(dow===1&&!ex(date,"matheoCovered")) mine.push({time:"18:00",label:"Récupérer Mathéo à l’étude",who:"Nicolas"});
- if(dow===2||dow===5) info.push({time:"17:00",label:"Mathéo – natation Rambouillet (gérée par un tiers)"});
- if(dow===4) info.push({time:"18:00",label:"Mathéo – sortie d’étude gérée par la voisine"});
- if(dow===3&&wifeWorks(date)) info.push({time:"",label:"Mathéo chez les grands-parents"});
- mine.sort((a,b)=>mins(a.time)-mins(b.time));
- let points=mine.length+(wifeWorks(date)?1:0), load=points>=4?"🔴 Critique":points>=3?"🟠 Chargée":"🟢 Simple";
- return {mine,info,wt,load,wife:wifeWorks(date)}
+ custom.forEach(e=>{if(e.kind==="action")mine.push({time:e.start||"",label:`${e.person} – ${e.title}`})});
+ mine.sort((a,b)=>mins(a.time)-mins(b.time));let pts=mine.length+(wifeWorks(s)?1:0),load=pts>=4?"🔴 Critique":pts>=3?"🟠 Chargée":"🟢 Simple";
+ return{mine,hugo,matheo,custom,wt,vac,wife:wifeWorks(s),load}
 }
-function renderToday(date=iso(new Date())){
- let p=plan(date); document.getElementById("dateLabel").textContent=parse(date).toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
- document.getElementById("loadLabel").textContent=p.load;document.getElementById("weekType").textContent="Semaine "+p.wt;document.getElementById("wifeStatus").textContent=p.wife?"🏥 Travaille 12 h":"🏠 Repos";
- document.getElementById("todayList").innerHTML=p.mine.length?p.mine.map(x=>`<div class="item row"><span class="time">${x.time}</span><span style="flex:1">${x.label}<div class="who">${x.who}</div></span></div>`).join(""):`<div class="notice">Aucune action familiale prévue pour Nicolas.</div>`;
- document.getElementById("familyList").innerHTML=p.info.length?p.info.map(x=>`<div class="item row"><span class="time">${x.time||"—"}</span><span style="flex:1">${x.label}</span></div>`).join(""):`<div class="muted" style="margin-top:10px">Aucune information supplémentaire.</div>`;
-}
-function renderWeek(){
- let now=new Date(), mon=new Date(now);mon.setDate(now.getDate()-((now.getDay()+6)%7));
- let arr=[];for(let i=0;i<7;i++){let d=new Date(mon);d.setDate(mon.getDate()+i);let s=iso(d),p=plan(s);arr.push(`<button class="day" onclick="renderToday('${s}');showTab('today')"><strong>${d.toLocaleDateString("fr-FR",{weekday:"short",day:"numeric"})}</strong><span>${p.load}</span><div class="muted">${p.mine.length} action(s)</div></button>`)}
- document.getElementById("weekGrid").innerHTML=arr.join("");
-}
-function renderExceptions(){document.getElementById("exList").innerHTML=state.exceptions.map((x,i)=>`<div class="item row"><span>${x.date} • ${x.type}${x.note?" • "+x.note:""}</span><button class="btn danger" onclick="delEx(${i})">Suppr.</button></div>`).join("")}
-function delEx(i){state.exceptions.splice(i,1);save();renderAll()}
-function renderWife(){document.getElementById("wifeDates").innerHTML=state.wife.sort().map(d=>`<div class="item row"><span>${d}</span><button class="btn danger" onclick="delWife('${d}')">Retirer</button></div>`).join("")}
-function delWife(d){state.wife=state.wife.filter(x=>x!==d);save();renderAll()}
-function renderAll(){renderToday();renderWeek();renderExceptions();renderWife()}
-function showTab(id){document.querySelectorAll("main section").forEach(s=>s.classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b.dataset.tab===id))}
-document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
-document.getElementById("saveEx").onclick=()=>{let date=exDate.value;if(!date)return;state.exceptions.push({date,type:exType.value,note:exNote.value});save();exNote.value="";renderAll()}
-document.getElementById("addWife").onclick=()=>{if(wifeDate.value&&!state.wife.includes(wifeDate.value)){state.wife.push(wifeDate.value);save();renderAll()}}
-document.getElementById("checkMeet").onclick=()=>{let date=meetDate.value;if(!date)return;let p=plan(date),a=mins(meetStart.value),b=mins(meetEnd.value), conflicts=p.mine.filter(x=>{let m=mins(x.time);return m>=a-30&&m<=b+30});let el=document.getElementById("meetResult");el.className="notice";el.innerHTML=conflicts.length?`❌ <strong>Conflit familial détecté</strong><br>${conflicts.map(x=>x.time+" – "+x.label).join("<br>")}`:`✅ <strong>Aucun conflit familial direct détecté.</strong><br><span class="muted">La V1 ne calcule pas encore le temps de trajet depuis le lieu du rendez-vous.</span>`}
-document.getElementById("resetData").onclick=()=>{if(confirm("Supprimer toutes les exceptions ?")){state.exceptions=[];save();renderAll()}}
-document.getElementById("exportData").onclick=()=>{let blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="famille-barat-donnees.json";a.click()}
-let today=iso(new Date());exDate.value=meetDate.value=wifeDate.value=today;renderAll();
-if("serviceWorker" in navigator) navigator.serviceWorker.register("sw.js");
-</script>
-</body></html>
+const items=a=>a.map(x=>`<div class="item row"><span class="time">${x.time||"—"}</span><span style="flex:1">${x.label}</span></div>`).join("");
+function freeSlots(p){let busy=p.mine.map(x=>mins(x.time)).filter(x=>x<9999).sort((a,b)=>a-b),slots=[],start=8*60;busy.forEach(t=>{let end=t-45;if(end-start>=60)slots.push([start,end]);start=Math.max(start,t+45)});if(19*60-start>=60)slots.push([start,19*60]);return slots}
+function renderDay(){let s=iso(selected),p=plan(s);dateLabel.textContent=selected.toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long",year:"numeric"});loadLabel.textContent=p.load;weekType.textContent="Semaine "+p.wt;wifeStatus.textContent=p.wife?"🏥 Travaille 12 h":"🏠 Repos";vacationBanner.innerHTML=p.vac?`<div class="notice vacnote">🏖️ ${p.vac[2]} : école et sports récurrents suspendus.</div>`:"";mine.innerHTML=p.mine.length?items(p.mine):'<div class="notice">Aucune obligation familiale pour Nicolas.</div>';hugo.innerHTML=items(p.hugo);matheo.innerHTML=items(p.matheo);custom.innerHTML=p.custom.length?p.custom.map(e=>`<div class="item ${e.kind==="action"?"event-action":"event-info"}"><strong>${e.start||"—"} ${e.title}</strong><div>${e.person}${e.end?" • jusqu'à "+e.end:""}${e.note?" • "+e.note:""}</div></div>`).join(""):'<div class="muted" style="margin-top:9px">Aucun événement ajouté.</div>'}
+function renderWeek(){let mon=new Date(weekCursor);mon.setDate(mon.getDate()-((mon.getDay()+6)%7));weekTitle.textContent=`Semaine ${weekType(iso(mon))} • ${mon.toLocaleDateString("fr-FR",{day:"numeric",month:"short"})}`;weekGrid.innerHTML="";for(let i=0;i<7;i++){let d=new Date(mon);d.setDate(mon.getDate()+i);let s=iso(d),p=plan(s),b=document.createElement("button");b.className="day"+(p.vac?" vac":"");let slots=freeSlots(p);b.innerHTML=`<strong>${d.toLocaleDateString("fr-FR",{weekday:"short",day:"numeric"})}</strong><div class="small">${p.load}</div>${p.wife?'<div class="small">🏥 Maman</div>':''}${p.vac?'<div class="small">🏖️ Vacances</div>':''}<div class="busy">${p.mine.length} obligation(s)</div>${slots.slice(0,3).map(x=>`<div class="free">RDV ${hh(x[0])}–${hh(x[1])}</div>`).join("")}`;b.onclick=()=>{selected=d;renderDay();showTab("day")};weekGrid.appendChild(b)}}
+function renderMonth(){let y=monthCursor.getFullYear(),m=monthCursor.getMonth(),first=new Date(y,m,1),last=new Date(y,m+1,0);monthTitle.textContent=first.toLocaleDateString("fr-FR",{month:"long",year:"numeric"});monthGrid.innerHTML="";["L","M","M","J","V","S","D"].forEach(x=>{let e=document.createElement("div");e.className="muted";e.textContent=x;monthGrid.appendChild(e)});for(let i=0;i<(first.getDay()+6)%7;i++)monthGrid.appendChild(document.createElement("div"));for(let n=1;n<=last.getDate();n++){let d=new Date(y,m,n),s=iso(d),p=plan(s),b=document.createElement("button");b.className="mday"+(p.vac?" vac":"");b.innerHTML=`<strong>${n}</strong>${p.vac?"🏖️ ":""}${p.wife?"🏥 ":""}<div>${p.mine.length} act.</div>${p.custom.length?`<div>➕ ${p.custom.length}</div>`:""}`;b.onclick=()=>{selected=d;renderDay();showTab("day")};monthGrid.appendChild(b)}}
+function renderEvents(){eventList.innerHTML=state.events.sort((a,b)=>(a.date+a.start).localeCompare(b.date+b.start)).map((e,i)=>`<div class="item row"><span>${e.date} • ${e.start||""} • ${e.person} • ${e.title}</span><button class="btn danger" onclick="delEvent(${i})">Suppr.</button></div>`).join("")}window.delEvent=i=>{state.events.splice(i,1);save();renderAll()}
+function renderEx(){exList.innerHTML=state.exceptions.map((e,i)=>`<div class="item row"><span>${e.date} • ${e.type}${e.note?" • "+e.note:""}</span><button class="btn danger" onclick="delEx(${i})">Suppr.</button></div>`).join("")}window.delEx=i=>{state.exceptions.splice(i,1);save();renderAll()}
+function renderWife(){wifeDates.innerHTML=state.wife.sort().map(d=>`<div class="item row"><span>${d}</span><button class="btn danger" onclick="delWife('${d}')">Retirer</button></div>`).join("")}window.delWife=d=>{state.wife=state.wife.filter(x=>x!==d);save();renderAll()}
+function renderHugoSettings(){let names={1:"Lun",2:"Mar",3:"Mer",4:"Jeu",5:"Ven"},h='<table><tr><th>Sem.</th><th>Jour</th><th>Départ</th><th>Retour</th></tr>';["A","B"].forEach(w=>Object.keys(names).forEach(k=>{let v=state.hugo[w][k];h+=`<tr><td>${w}</td><td>${names[k]}</td><td><input data-h="${w}-${k}-0" type="time" value="${v[0]}"></td><td><input data-h="${w}-${k}-1" type="time" value="${v[1]}"></td></tr>`}));hugoSettings.innerHTML=h+"</table>"}
+function renderMatheoSettings(){let names={1:"Lundi",2:"Mardi",3:"Mercredi",4:"Jeudi",5:"Vendredi"},h='<table><tr><th>Jour</th><th>Bus</th><th>Activité</th><th>Libellé</th></tr>';Object.keys(names).forEach(k=>{let v=state.matheo[k];h+=`<tr><td>${names[k]}</td><td><input data-m="${k}-bus" type="time" value="${v.bus}"></td><td><input data-m="${k}-extra" type="time" value="${v.extra}"></td><td><input data-m="${k}-label" value="${v.label}"></td></tr>`});matheoSettings.innerHTML=h+"</table>"}
+function showTab(id){document.querySelectorAll("main section").forEach(s=>s.classList.add("hidden"));document.getElementById(id).classList.remove("hidden");document.querySelectorAll(".tab").forEach(b=>b.classList.toggle("active",b.dataset.tab===id));if(id==="week")renderWeek();if(id==="month")renderMonth()}document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
+prevDay.onclick=()=>{selected.setDate(selected.getDate()-1);renderDay()};nextDay.onclick=()=>{selected.setDate(selected.getDate()+1);renderDay()};todayBtn.onclick=()=>{selected=new Date();renderDay()};prevWeek.onclick=()=>{weekCursor.setDate(weekCursor.getDate()-7);renderWeek()};nextWeek.onclick=()=>{weekCursor.setDate(weekCursor.getDate()+7);renderWeek()};prevMonth.onclick=()=>{monthCursor.setMonth(monthCursor.getMonth()-1);renderMonth()};nextMonth.onclick=()=>{monthCursor.setMonth(monthCursor.getMonth()+1);renderMonth()};
+saveEvent.onclick=()=>{if(!evDate.value||!evTitle.value.trim())return alert("Indique au minimum une date et un intitulé.");state.events.push({date:evDate.value,start:evStart.value,end:evEnd.value,person:evPerson.value,title:evTitle.value.trim(),kind:evKind.value,note:evNote.value.trim()});save();evTitle.value=evNote.value="";renderAll();alert("Événement ajouté.")};
+saveEx.onclick=()=>{if(!exDate.value)return;state.exceptions.push({date:exDate.value,type:exType.value,note:exNote.value});save();renderAll()};addWife.onclick=()=>{if(wifeDate.value&&!state.wife.includes(wifeDate.value)){state.wife.push(wifeDate.value);save();renderAll()}};
+saveHugo.onclick=()=>{document.querySelectorAll("[data-h]").forEach(i=>{let[w,d,n]=i.dataset.h.split("-");state.hugo[w][d][+n]=i.value});save();renderAll();alert("Horaires Hugo enregistrés.")};saveMatheo.onclick=()=>{document.querySelectorAll("[data-m]").forEach(i=>{let[d,k]=i.dataset.m.split("-");state.matheo[d][k]=i.value});save();renderAll();alert("Planning Mathéo enregistré.")};
+resetExceptions.onclick=()=>{if(confirm("Effacer toutes les exceptions ?")){state.exceptions=[];save();renderAll()}};exportData.onclick=()=>{let a=document.createElement("a"),blob=new Blob([JSON.stringify(state,null,2)],{type:"application/json"});a.href=URL.createObjectURL(blob);a.download="famille-barat-v3-donnees.json";a.click()};
+function renderAll(){renderDay();renderWeek();renderMonth();renderEvents();renderEx();renderWife();renderHugoSettings();renderMatheoSettings()}
+let t=iso(new Date());evDate.value=exDate.value=wifeDate.value=t;renderAll();if("serviceWorker"in navigator)navigator.serviceWorker.register("sw.js");
+</script></body></html>
