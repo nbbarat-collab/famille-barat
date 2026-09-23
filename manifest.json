@@ -1,9 +1,8 @@
 {
   "name": "Famille BARAT",
   "short_name": "Famille BARAT",
-  "start_url": "./index.html",
+  "start_url": "./index.html?v=5",
   "display": "standalone",
   "background_color": "#f6f7fb",
-  "theme_color": "#f6f7fb",
-  "description": "Cockpit familial V4"
+  "theme_color": "#f6f7fb"
 }
