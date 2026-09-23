@@ -1,7 +1,7 @@
 {
-  "name": "Famille BARAT",
+  "name": "Famille BARAT V6",
   "short_name": "Famille BARAT",
-  "start_url": "./index.html?v=5",
+  "start_url": "./index.html?v=6",
   "display": "standalone",
   "background_color": "#f6f7fb",
   "theme_color": "#f6f7fb"
