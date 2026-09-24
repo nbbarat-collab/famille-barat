@@ -1,10 +1,10 @@
-Famille BARAT V6
+Famille BARAT V7
 
-- Natation Mathéo : début 17h00 et sortie 18h45 séparés.
-- Tennis Hugo : début 18h30 et sortie 19h30 séparés.
-- Bus Hugo : ajout des départs utilisables depuis Cimetière même sans passage au collège, dont 15h16.
-- Réaffectation indépendante de chaque action.
-- Calendrier : export ICS de seulement mes obligations, événements PRIVATE et TRANSPARENT.
-- Migration automatique des données V5 vers V6.
+- Synchronisation multi-appareils via Supabase.
+- Connexion depuis Réglages avec le compte Supabase.
+- Migration automatique des données locales V6 vers V7.
+- Enregistrement local immédiat + synchronisation cloud automatique.
+- Fonctionnement hors ligne : les données locales restent disponibles.
+- Bus Hugo, emploi du temps, réaffectations, activités et export ICS conservés.
 
-Note : l’export ICS fonctionne. Une URL Outlook automatiquement synchronisée nécessite un stockage partagé/backend, car les affectations sont actuellement en localStorage.
+Déploiement GitHub Pages : remplacer index.html, manifest.json, sw.js et README.txt, et conserver bus-7810.pdf et emploi-du-temps-hugo.pdf à la racine.
